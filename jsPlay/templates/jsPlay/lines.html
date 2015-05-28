@@ -1,0 +1,140 @@
+                
+                
+{% load staticfiles %}
+
+<html>
+    <head>
+        <title>My first Three.js app</title>
+        <style>
+            body { margin: 0; }
+            canvas { width: 100%; height: 100% }
+        </style>
+    </head>
+    <body>
+        <div id = "container">
+        </div>
+        <script src="{% static 'jsPlay/js/three.min.js' %}"></script>
+        <script src="{% static 'jsPlay/js/ColladaLoader.js' %}"></script>
+        <script src="{% static 'jsPlay/js/TrackballControls.js' %}"></script>
+
+        <script>
+
+            var renderer = new THREE.WebGLRenderer();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            document.body.appendChild(renderer.domElement);
+            var camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 1000);
+            camera.position.set(40, 0, 600);
+            var coordinates = [];
+            var previousX = 150;
+            var previousY = 150;
+            var scene = new THREE.Scene();
+
+            var material = new THREE.LineBasicMaterial({color: 0x0000ff});
+
+
+
+
+            var geometry = new THREE.Geometry();
+
+            console.log(geometry.vertices.length)
+            while(geometry.vertices.length < 100){
+                var whichWay = Math.floor(Math.random()*10);
+                console.log(whichWay)
+                if (whichWay == 0) {
+                    previousX += 0;
+                    previousY += 20;
+                    } 
+                else if (whichWay == 1){
+                    previousX += 10;
+                    previousY += 20;
+
+                    }
+                else if (whichWay == 2){
+                    previousX += 20;
+                    previousY += -10;
+
+                    }
+                else if (whichWay == 3){
+                    previousX += 20;
+                    previousY += -10;
+
+                    }
+                else if (whichWay == 4){
+                    previousX += 10;
+                    previousY += -20;
+
+                    }
+                else if (whichWay == 5){
+                    previousX += 0;
+                    previousY += -20;
+
+                    }
+                else if (whichWay == 6){
+                    previousX += -10;
+                    previousY += -20;
+
+                    }
+                else if (whichWay == 7){
+                    previousX += -20;
+                    previousY += -10;
+
+                    }
+                else if (whichWay == 8){
+                    previousX += -20;
+                    previousY += 10;
+
+                    }
+                else if (whichWay == 9){
+                    previousX += -10;
+                    previousY += 10;
+
+                    }
+                geometry.vertices.push(new THREE.Vector3(previousX ,previousY, 0))
+            }
+
+
+            var line = new THREE.Line(geometry, material);
+            scene.add( line );
+
+
+
+
+
+
+
+
+
+
+
+            //camera.lookAt(spline);
+            render();
+            animate()
+            function onWindowResize() {
+
+                camera.aspect = window.innerWidth / window.innerHeight;
+                camera.updateProjectionMatrix();
+                renderer.setSize( window.innerWidth, window.innerHeight );
+                render()
+            }
+            function animate() {
+                render();
+
+                requestAnimationFrame( animate );
+
+
+
+            }
+
+            function render() {
+                line.rotation.y += 20;
+                line.rotation.x += 0.025;
+                line.rotation.z += 0.0025;
+                renderer.render( scene, camera );
+
+
+            }
+        
+        </script>
+
+    </body>
+</html>

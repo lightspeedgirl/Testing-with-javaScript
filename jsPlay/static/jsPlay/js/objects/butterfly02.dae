@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Gabriella</author>
+      <authoring_tool>OpenCOLLADA2013 x64</authoring_tool>
+      <comments>
+			ColladaMaya export options: 
+			bakeTransforms=0;relativePaths=0;copyTextures=0;exportTriangles=0;exportCgfxFileReferences=1;
+			isSampling=0;curveConstrainSampling=0;removeStaticCurves=1;exportPolygonMeshes=1;exportLights=1;
+			exportCameras=1;exportJointsAndSkin=1;exportAnimations=1;exportInvisibleNodes=0;exportDefaultCameras=1;
+			exportTexCoords=1;exportNormals=1;exportNormalsPerVertex=1;exportVertexColors=1;exportVertexColorsPerVertex=1;
+			exportTexTangents=0;exportTangents=0;exportReferencedMaterials=0;exportMaterialsOnly=0;
+			exportXRefs=1;dereferenceXRefs=1;exportCameraAsLookat=0;cameraXFov=0;cameraYFov=1;doublePrecision=0
+		</comments>
+      <source_data>file:///C:/Users/Gabriella/Documents/maya/projects/default/untitled</source_data>
+    </contributor>
+    <created>2015-02-27T23:01:22</created>
+    <modified>2015-02-27T23:01:22</modified>
+    <unit name="centimeter" meter="0.01"/>
+    <up_axis>Y_UP</up_axis>
+  </asset>
+  <library_materials>
+    <material id="lambert1" name="lambert1">
+      <instance_effect url="#lambert1-fx"/>
+    </material>
+  </library_materials>
+  <library_effects>
+    <effect id="lambert1-fx">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color>0.4 0.4 0.4 1</color>
+            </diffuse>
+            <transparent opaque="RGB_ZERO">
+              <color>0 0 0 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_controllers>
+    <controller id="butterfly00Shape1-skin" name="butterfly00Shape1-skin">
+      <skin source="#butterfly00Shape1">
+        <bind_shape_matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</bind_shape_matrix>
+        <source id="butterfly00Shape1-skin-joints" name="butterfly00Shape1-skin-joints">
+          <Name_array id="butterfly00Shape1-skin-joints-array" count="5">joint5 joint1 joint2 joint3 joint4</Name_array>
+          <technique_common>
+            <accessor source="#butterfly00Shape1-skin-joints-array" count="5" stride="1">
+              <param name="JOINT" type="name"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="butterfly00Shape1-skin-bind_poses" name="butterfly00Shape1-skin-bind_poses">
+          <float_array id="butterfly00Shape1-skin-bind_poses-array" count="80">1 0 0 0.003347066 0 1 0 0 0 0 1 -0.5834054 0 0 0 1 0.9999307 -5.64851e-4 -0.01175978 -0.1864769 5.64851e-4 0.9999998 0 -1.07272e-4 0.01175978 0 0.9999309 -0.5842085 0 0 0 1 1 0 0 -2.238329 0 1 0 0.001155198 0 0 1 -0.5579249 0 0 0 1 -0.9999307 -5.64939e-4 -0.01175978 -0.1931705 -5.649e-4 0.9999998 0 -1.0913e-4 0.01175978 0 -0.9999309 0.5842873 0 0 0 1 1 0 0 2.245023 0 1 0 0.001155376 0 0 1 -0.5579249 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#butterfly00Shape1-skin-bind_poses-array" count="5" stride="16">
+              <param name="TRANSFORM" type="float4x4"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="butterfly00Shape1-skin-weights" name="butterfly00Shape1-skin-weights">
+          <float_array id="butterfly00Shape1-skin-weights-array" count="234">1 0.5235294 0.6562891 0.4844459 0.5164172 0.2849638 0.3615605 0.4715353 0.4789 0.345153 0.4961948 0.4789 0.4789 0.4299798 0.4583901 0.4789 0.4789 0.5222501 0.5098525 0.3905782 0.3984814 0.4789 0.4789 0.534925 0.3984114 0.4643779 0.4864951 0.4789 0.4789 0.5088706 0.6229327 0.4691103 0.4774221 0.3192359 0.4789 0.3034237 0.4789 0.4789 0.3956314 0.4117678 0.4789 0.4789 0.5149683 0.5018889 0.3465212 0.3188757 0.4789 0.4789 0.4961952 0.455401 0.4381199 0.4620875 0.4789 0.4789 0.5170543 0.5193192 0.7758715 0.05645114 0.9044195 0.004299044 0.9938678 0.001366496 0.9826051 0.9849745 0.8457866 0.0584712 0.8462135 0.03696453 0.8877356 0.01854395 0.8193346 0.9340507 0.9982948 0.9978382 0.9309748 0.981146 0.993882 0.9994856 0.9580019 0.9570242 0.9330292 0.7203873 0.9864031 0.9919909 0.9981028 0.984199 0.9997808 0.9723823 0.998624 0.9955656 0.9985776 0.9557439 0.9949811 0.9895337 0.01256912 0.9904932 0.9665561 0.9673445 0.9250919 0.8812157 0.9795082 0.9743021 0.990512 0.9940318 0.9889133 0.979898 0.9339576 0.9797546 0.9297158 0.9960784 0.4961948 0.9695502 0.4844459 0.4643779 0.4864951 0.9948328 0.9079227 0.9940729 0.4976713 0.9997226 0.03216695 0.5440831 0.3886994 0.5685331 0.4049147 0.9766347 0.4583901 0.9944478 0.4299798 0.9041846 0.3905782 0.9887128 0.3984814 0.9936777 0.4789121 0.4049967 0.9997916 0.1898607 0.9997865 0.2847414 0.5646627 0.4086399 0.6096413 0.4038249 0.9932543 0.3615605 0.345153 0.991084 0.3383253 0.9957555 0.276543 0.6811575 0.3333988 0.9988522 0.4957706 0.9758709 0.4691103 0.9846878 0.4381199 0.4620875 0.9851402 0.08573037 0.5270655 0.3771983 0.9925985 0.9898715 0.3956314 0.8840395 0.3465212 0.9734256 0.3188757 0.9996907 0.9778547 0.3149431 0.9965552 0.1644659 0.9876971 0.1774206 0.5394824 0.3705129 0.5170543 0.3759446 0.9056363 0.3034237 0.9172319 0.2294622 0.9809304 0.1589139 0.5941769 0.3179536 0.9542396 0.07543963 0.9751287 0.07773983 0.9262344 0.07518887 0.9183347 0.07410258 0.9685627 0.0635907 0.9972856 0.08098292 0.08172798 0.993378 0.08076494 0.9405151 0.06667971 0.9809374 0.9910767 0.9226874 0.9043283 0.08334964 0.9997292 0.8456545 0.9981712 0.9778735 0.976375 0.9242455 0.9967751 0.9760944 0.9674146 0.9618086 0.898567 0.9701246 0.9930844 0.9779943 0.8818159 0.7982063 0.7392196 0.9142879 0.07948839 0.9880418 0.9674879 0.9585691 </float_array>
+          <technique_common>
+            <accessor source="#butterfly00Shape1-skin-weights-array" count="234" stride="1">
+              <param name="WEIGHT" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <joints>
+          <input semantic="JOINT" source="#butterfly00Shape1-skin-joints"/>
+          <input semantic="INV_BIND_MATRIX" source="#butterfly00Shape1-skin-bind_poses"/>
+        </joints>
+        <vertex_weights count="181">
+          <input semantic="JOINT" source="#butterfly00Shape1-skin-joints" offset="0"/>
+          <input semantic="WEIGHT" source="#butterfly00Shape1-skin-weights" offset="1"/>
+          <vcount>2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 1 2 2 2 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 1 1 1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 2 1 1 1 </vcount>
+          <v>0 1 1 2 1 0 2 3 0 4 1 5 1 0 2 6 1 0 2 7 1 0 2 8 1 0 2 9 1 0 2 10 1 0 2 11 1 0 2 12 1 0 2 13 1 0 2 14 1 0 2 15 1 0 2 16 0 17 1 18 1 0 2 19 1 0 2 20 1 0 2 21 1 0 2 22 0 23 1 24 1 0 2 25 1 0 2 26 1 0 2 27 1 0 2 28 0 29 1 30 1 0 2 31 0 32 1 33 1 0 2 34 1 0 2 35 1 0 2 36 1 0 2 37 1 0 2 38 1 0 2 39 1 0 2 40 1 0 2 41 0 42 1 43 1 0 2 44 1 0 2 45 1 0 2 46 1 0 2 47 0 48 1 49 1 0 2 50 1 0 2 51 1 0 2 52 1 0 2 53 0 54 1 55 0 56 1 57 0 58 1 59 0 60 1 61 0 62 0 63 0 64 1 65 0 66 1 67 0 68 1 69 0 70 0 71 0 72 0 0 0 0 0 73 0 74 0 75 0 76 0 77 0 78 0 79 0 80 0 81 0 82 0 83 0 84 0 85 0 86 0 87 0 88 0 89 0 90 0 91 0 92 0 93 1 94 0 0 0 0 0 95 0 96 0 97 0 98 0 99 0 100 0 101 0 102 0 103 0 104 0 0 0 105 0 106 0 107 0 108 0 0 3 109 4 110 3 111 4 112 3 0 4 113 3 0 4 114 3 115 3 116 4 0 3 117 4 118 3 119 4 120 0 121 3 122 0 123 3 124 3 125 4 126 3 127 4 128 3 129 4 130 3 131 4 132 3 133 4 134 3 0 4 135 3 136 4 137 3 138 4 139 0 140 3 141 0 142 3 143 3 144 4 145 3 0 4 146 3 147 4 148 3 149 4 150 0 151 3 152 3 153 4 154 3 155 4 156 3 157 4 158 3 0 4 159 3 160 4 0 3 0 4 161 0 162 3 163 3 164 4 0 3 165 4 166 3 167 4 168 3 169 4 170 3 171 4 0 3 172 4 173 3 174 4 175 3 176 4 177 0 178 3 179 0 180 3 181 3 182 4 183 3 184 4 185 3 186 4 187 0 188 3 189 0 190 3 191 0 192 3 193 0 194 3 195 0 196 3 197 0 198 3 199 0 200 3 201 0 0 3 202 0 203 3 204 0 205 3 206 0 207 0 208 0 209 0 0 0 210 3 211 0 212 0 213 0 214 0 215 0 216 0 0 0 217 0 218 0 219 0 220 0 221 0 222 0 223 0 0 0 224 0 225 0 226 0 227 0 228 0 229 3 230 0 231 0 232 0 233 </v>
+        </vertex_weights>
+        <extra>
+          <technique profile="OpenCOLLADAMaya">
+            <originalMayaNodeId>butterfly00Shape1-skin</originalMayaNodeId>
+          </technique>
+        </extra>
+      </skin>
+    </controller>
+  </library_controllers>
+  <library_geometries>
+    <geometry id="butterfly00Shape1" name="butterfly00Shape1">
+      <mesh>
+        <source id="butterfly00Shape1-positions" name="butterfly00Shape1-positions">
+          <float_array id="butterfly00Shape1-positions-array" count="543">0.1933342 0 0.5819752 3.714212 -0.002207398 1.016722 0.1934102 0 1.337951 4.420044 -0.003002644 4.39857 2.496596 -0.001324654 3.882216 2.238329 -0.001155198 0.5579249 3.750788 -0.002151489 4.624739 3.149935 -0.001755297 0.5649918 1.480202 -6.54697e-4 2.860423 1.356541 -5.73456e-4 0.5436068 4.462731 -0.002620697 2.596507 3.521702 -0.002000332 2.184175 2.49712 -0.001324892 1.771845 1.472538 -6.49571e-4 1.359514 0.1932054 0 0.9541693 4.752351 -0.00281167 3.612264 3.636244 -0.002075911 3.404457 2.496857 -0.001324654 2.82703 1.47637 -6.52075e-4 2.109968 0.1934054 0 1.105784 4.149241 -0.002414107 1.636406 3.335817 -0.001877785 1.374584 2.373198 -0.001243234 1.168418 1.410577 -6.08683e-4 0.9622527 0.1932718 0 0.7508311 3.686249 -0.002112031 -0.7207286 0.1937977 0 -0.03921375 1.1988 -4.71115e-4 -3.306021 2.566179 -0.001373529 -3.780127 3.052011 -0.001693279 0.1351864 0.6103814 0 -2.25271 3.553395 -0.002025127 -2.365788 2.949329 -0.001626015 -1.891713 2.08064 -0.00105238 -1.194968 1.211951 -4.78715e-4 -0.4982233 0.1940421 0 0.261036 3.130736 -0.001746655 -3.192704 2.840091 -0.001477964 -3.636811 1.791336 -8.61645e-4 -2.206672 1.010046 -3.45588e-4 -1.218936 0.1938198 0 0.1160835 3.777191 -0.002172232 -1.503459 2.993015 -0.001654625 -1.060747 2.127212 -0.001082897 -0.5799125 1.26141 -5.11251e-4 -0.09907788 0.1936855 0 0.4163333 0.08787502 0 0.5819752 0.0897297 0 0.7439346 0.0897297 0 0.9058939 0.0897297 0 1.067853 0.08545126 0 1.372576 0.08831792 0 0.426678 0.09526585 0 0.1886229 0.09291349 0 0.1160835 0.09521148 0 -0.03921375 -0.003347066 0 0.5834054 -0.003347066 0 0.7458391 -0.003347066 0 0.9058939 -0.003347066 0 1.067853 -0.003347066 0 1.407473 -0.003347066 0 0.4237432 -0.003347066 0 0.1561159 -0.003347067 0 0.1111622 -0.003347066 0 -0.04413523 0.085457 0 -1.320489 0.03342758 0 -1.373096 -0.003347066 0 -1.403303 0.1755494 0 -0.3790056 0.09521148 0 -0.3790056 -0.003347066 0 -0.3839271 0.1755834 0 -0.9739807 0.09144401 0 -1.030252 -0.003347066 0 -1.063511 0.1243451 0 -1.194855 0.06737577 0 -1.210832 -0.003347066 0 -1.233407 0.1652495 0 1.618234 0.08545126 0 1.718747 -0.003347066 0 1.753645 0.1720164 0 1.478044 0.08545126 0 1.545662 -0.003347066 0 1.580559 0.4054134 0 2.721167 0.3184583 0 2.756065 0.1687522 0 2.2658 0.2416315 0 2.236552 0.3086734 0 2.44659 0.2357943 0 2.475838 0.1535897 0 1.964227 0.08071058 0 1.993476 0.1254465 0 1.84405 0.03849133 0 1.878947 0.2751525 0 2.341571 0.2022734 0 2.37082 0.2081106 0 2.131533 0.1352313 0 2.160781 0.3421945 0 2.551609 0.2693153 0 2.580857 -3.15663 -0.001755297 0.5649918 -3.720907 -0.00220716 1.016722 -4.155935 -0.002413869 1.636406 -3.342512 -0.001877069 1.374584 -1.363235 -5.73456e-4 0.5436068 -2.245023 -0.001155376 0.5579249 -2.379892 -0.001243472 1.168418 -1.417271 -6.08921e-4 0.9622527 -0.2000283 0 0.5819752 -0.199966 0 0.7508311 -3.528396 -0.002000332 2.184175 -4.469425 -0.00262022 2.596507 -4.759046 -0.002811909 3.612264 -3.642938 -0.002076387 3.404457 -2.503814 -0.001324892 1.771845 -2.503551 -0.001324654 2.82703 -1.479232 -6.49929e-4 1.359514 -1.483064 -6.52075e-4 2.109968 -0.1998994 0 0.9541693 -0.2000994 0 1.105784 -4.426738 -0.003002644 4.39857 -3.757482 -0.002152205 4.624739 -2.503291 -0.00132513 3.882216 -1.486897 -6.54578e-4 2.860423 -0.2001045 0 1.337951 -3.058705 -0.001693279 0.1351864 -3.692943 -0.002112508 -0.7207286 -3.783885 -0.002171993 -1.503459 -2.999709 -0.001654387 -1.060747 -2.133906 -0.00108242 -0.5799125 -1.268104 -5.11371e-4 -0.09907788 -0.2003797 0 0.4163333 -2.956023 -0.001626015 -1.891713 -3.560089 -0.002025366 -2.365788 -3.13743 -0.001746655 -3.192704 -2.846785 -0.001478434 -3.636811 -2.087334 -0.001052499 -1.194968 -1.79803 -8.61645e-4 -2.206672 -1.218645 -4.78476e-4 -0.4982233 -1.01674 -3.45647e-4 -1.218936 -0.2007362 0 0.261036 -0.200514 0 0.1160835 -2.572873 -0.00137353 -3.780127 -1.205494 -4.70638e-4 -3.306021 -0.6170755 0 -2.25271 -0.2004918 0 -0.03921375 -0.095012 0 0.426678 -0.09456912 0 0.5819752 -0.09960758 0 0.1160835 -0.1019598 0 0.1886229 -0.1019056 0 -0.03921375 -0.0964238 0 0.7439346 -0.09642379 0 0.9058939 -0.0964238 0 1.067853 -0.09214538 0 1.372576 -0.1019056 0 -0.3790056 -0.09813818 0 -1.030252 -0.07406992 0 -1.210832 -0.04012172 0 -1.373096 -0.1787106 0 1.478044 -0.09214536 0 1.545662 -0.1719436 0 1.618234 -0.09214541 0 1.718747 -0.2483258 0 2.236552 -0.2818466 0 2.341571 -0.1754463 0 2.2658 -0.2089674 0 2.37082 -0.04518548 0 1.878947 -0.1321407 0 1.84405 -0.3153676 0 2.44659 -0.3488886 0 2.551609 -0.2424883 0 2.475838 -0.2760093 0 2.580857 -0.1602839 0 1.964227 -0.2148048 0 2.131533 -0.08740474 0 1.993476 -0.1419254 0 2.160781 -0.4121075 0 2.721167 -0.3251526 0 2.756065 -0.1822434 0 -0.3790056 -0.1822776 0 -0.9739807 -0.1310393 0 -1.194855 -0.09215108 0 -1.320489</float_array>
+          <technique_common>
+            <accessor source="#butterfly00Shape1-positions-array" count="181" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="butterfly00Shape1-normals" name="butterfly00Shape1-normals">
+          <float_array id="butterfly00Shape1-normals-array" count="810">-6.79081e-4 -0.9999998 0 -7.7181e-4 -0.9999996 1.04969e-4 -6.75024e-4 -0.9999998 0 -6.84532e-4 -0.9999998 0 -5.83108e-4 -0.9999998 0 -6.59202e-4 -0.9999998 0 -6.59109e-4 -0.9999997 0 -5.88746e-4 -0.9999998 0 -4.95606e-4 -0.9999999 0 -4.97657e-4 -0.9999998 0 -6.59275e-4 -0.9999998 0 -6.59231e-4 -0.9999998 0 -7.7552e-4 -0.9999997 -1.15112e-4 -6.96496e-4 -0.9999998 0 -6.59201e-4 -0.9999998 0 -6.59172e-4 -0.9999998 0 -5.94981e-4 -0.9999998 0 -5.98535e-4 -0.9999998 0 -5.03928e-4 -0.9999999 0 -5.07612e-4 -0.9999999 0 -8.91207e-4 -0.9999996 -2.29556e-4 -7.72828e-4 -0.9999997 -1.12459e-4 -6.59192e-4 -0.9999998 0 -6.33583e-4 -0.9999998 0 -5.07752e-4 -0.9999999 0 6.60376e-4 0.9999998 0 6.59929e-4 0.9999998 0 6.59989e-4 0.9999998 0 6.60138e-4 0.9999998 0 6.0443e-4 0.9999998 0 6.60122e-4 0.9999998 0 6.60199e-4 0.9999998 0 5.98121e-4 0.9999999 0 4.90608e-4 0.9999999 0 4.88554e-4 0.9999999 0 6.63867e-4 0.9999999 0 7.09981e-4 0.9999998 0 7.46771e-4 0.9999997 0 6.37566e-4 0.9999998 0 6.57582e-4 0.9999997 0 6.48321e-4 0.9999998 0 5.9484e-4 0.9999998 0 5.98886e-4 0.9999998 0 4.87038e-4 0.9999999 0 4.94576e-4 0.9999998 0 6.08251e-4 0.9999998 0 6.30538e-4 0.9999998 0 6.39946e-4 0.9999998 0 4.99778e-4 0.9999999 0 0 -1 0 0 -1 0 0 -0.9999999 0 0 -0.9999999 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -0.9999999 0 0 -1 0 0 -1 0 0 -1 0 0 -0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 0.9999999 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 0.9999999 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -0.9999999 0 0 -1 0 0 -1 0 0 -1 0 0 -0.9999999 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -0.9999999 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -0.9999999 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 6.78716e-4 -0.9999998 0 6.84287e-4 -0.9999998 0 6.75003e-4 -0.9999998 0 7.72369e-4 -0.9999997 1.05711e-4 5.83176e-4 -0.9999998 0 5.88799e-4 -0.9999998 0 6.58734e-4 -0.9999998 0 6.58944e-4 -0.9999998 0 4.95677e-4 -0.9999999 0 4.97784e-4 -0.9999998 0 6.59122e-4 -0.9999998 0 6.96332e-4 -0.9999997 0 7.74984e-4 -0.9999997 -1.15398e-4 6.58774e-4 -0.9999998 0 6.59026e-4 -0.9999998 0 6.59273e-4 -0.9999998 0 5.9505e-4 -0.9999998 0 5.98566e-4 -0.9999998 0 5.04207e-4 -0.9999998 0 5.07857e-4 -0.9999999 0 7.72632e-4 -0.9999997 -1.12587e-4 8.90672e-4 -0.9999996 -2.29498e-4 6.5932e-4 -0.9999998 0 6.33685e-4 -0.9999998 0 5.07742e-4 -0.9999998 0 -6.60714e-4 0.9999998 0 -6.60334e-4 0.9999998 0 -6.60206e-4 0.9999998 0 -6.60719e-4 0.9999998 0 -6.04388e-4 0.9999999 0 -5.98098e-4 0.9999999 0 -6.60163e-4 0.9999998 0 -6.60165e-4 0.9999998 0 -4.90799e-4 0.9999999 0 -4.8879e-4 0.9999999 0 -6.63807e-4 0.9999997 0 -6.37903e-4 0.9999999 0 -7.46513e-4 0.9999997 0 -7.09791e-4 0.9999998 0 -6.5751e-4 0.9999997 0 -6.48474e-4 0.9999998 0 -5.94678e-4 0.9999998 0 -5.98983e-4 0.9999998 0 -4.87061e-4 0.9999999 0 -4.94292e-4 0.9999998 0 -6.30941e-4 0.9999998 0 -6.08891e-4 0.9999998 0 -6.40062e-4 0.9999999 0 -5.00071e-4 0.9999999 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -0.9999999 0 0 -1 0 0 -1 0 0 -0.9999999 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 0.9999999 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -0.9999999 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -0.9999999 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -0.9999999 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 0.9999999 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0</float_array>
+          <technique_common>
+            <accessor source="#butterfly00Shape1-normals-array" count="270" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="butterfly00Shape1-map1" name="butterfly00Shape1-map1">
+          <float_array id="butterfly00Shape1-map1-array" count="362">0.3883463 0.7331691 0.4263268 0.774849 0.4783557 0.8069162 0.4562376 0.7467384 0.3861682 0.6003569 0.3875579 0.665658 0.438752 0.6754977 0.4212663 0.604257 0.3891338 0.5142015 0.4032854 0.5141557 0.5241289 0.7603077 0.5588886 0.8298993 0.6440808 0.851101 0.6264246 0.7684937 0.4893514 0.6845284 0.5777857 0.6842521 0.4545738 0.608749 0.5174698 0.6088502 0.420327 0.5141013 0.4330339 0.5140792 0.7099091 0.8262993 0.7287203 0.7766796 0.6662202 0.6839761 0.5803657 0.6089514 0.4524916 0.5140231 0.3523035 0.7260215 0.2807062 0.773201 0.2151255 0.7801266 0.2520604 0.7219433 0.2921726 0.6577057 0.3322848 0.5934681 0.3752515 0.5142678 0.1824082 0.7189103 0.1428062 0.7637624 0.07341194 0.7326617 0.03612918 0.711245 0.2406151 0.6544063 0.1557626 0.6332269 0.298822 0.5899023 0.2383762 0.5751248 0.3622362 0.514332 0.3500878 0.5143508 0.024059 0.6909941 0.06349945 0.5896118 0.1516502 0.5457776 0.3370723 0.514387 0.4026852 0.5064892 0.389111 0.5063912 0.4298326 0.5064103 0.4162588 0.5064497 0.4553702 0.5060193 0.3760958 0.5064618 0.350066 0.5068777 0.3561461 0.5070344 0.3370512 0.5070857 0.4028248 0.4995955 0.3892113 0.499635 0.4298125 0.4995171 0.4162388 0.4995565 0.4582759 0.4994344 0.3758301 0.4996738 0.3496329 0.4997499 0.3534005 0.499739 0.3366175 0.4997877 0.3085735 0.5071684 0.3085907 0.5131181 0.3081398 0.4998704 0.2539921 0.5070479 0.2587262 0.5132655 0.2511844 0.5000358 0.2388526 0.5053093 0.2402038 0.5095246 0.2369454 0.5000772 0.2296663 0.5066752 0.225246 0.5028347 0.2227066 0.5001186 0.4642281 0.5124045 0.4698765 0.5059772 0.4727821 0.4993923 0.4759758 0.5118692 0.4843826 0.5059351 0.4872883 0.4993502 0.5302487 0.5119711 0.5278132 0.5173756 0.5366219 0.5198326 0.5390575 0.5144281 0.4948927 0.5088665 0.4977988 0.5024183 0.5478663 0.5168851 0.5454307 0.5222896 0.5542395 0.5247465 0.5566751 0.5193421 0.5074065 0.5055171 0.5049708 0.5109215 0.5190044 0.5149186 0.52144 0.5095141 0.5684636 0.5293872 0.5713696 0.5229388 0.3869899 0.2661099 0.4548013 0.2521465 0.4765695 0.1918413 0.4247278 0.2242101 0.3855833 0.3989325 0.4206581 0.3948287 0.4377297 0.3234876 0.3865937 0.3336245 0.3890492 0.4850693 0.4032008 0.4850329 0.5226127 0.2381831 0.624859 0.2294032 0.6420351 0.1466946 0.5569675 0.1683908 0.4882759 0.3141631 0.5767103 0.3139258 0.4539391 0.3901432 0.5168334 0.3896768 0.4202425 0.4849883 0.4329492 0.4849366 0.7271054 0.2206231 0.7080064 0.1711137 0.6651448 0.3136883 0.5797275 0.3892103 0.4524069 0.4848797 0.3509893 0.2734668 0.2507715 0.278127 0.2134994 0.2201593 0.2791192 0.2267039 0.3317409 0.4061342 0.2912561 0.3421306 0.3751667 0.4850836 0.1811381 0.2815645 0.03490612 0.2900793 0.07206395 0.2684463 0.1412763 0.2369432 0.2397187 0.3457294 0.1549906 0.3674013 0.2982993 0.4098943 0.2379402 0.4250226 0.3621513 0.485095 0.350003 0.4851467 0.06298238 0.4115515 0.02295381 0.3103999 0.1513862 0.454873 0.3369876 0.4851862 0.5301747 0.48648 0.538969 0.4839719 0.5365021 0.4785817 0.5277078 0.4810897 0.4698382 0.4928245 0.4843444 0.4927824 0.455332 0.4928666 0.4297925 0.4926239 0.4162188 0.4926633 0.4026451 0.4927027 0.3890719 0.4928795 0.3760564 0.4928845 0.3561036 0.4924279 0.3500247 0.4926198 0.3370088 0.4924874 0.3085311 0.4925701 0.2539513 0.4930076 0.2388223 0.494834 0.2252302 0.4973877 0.4977808 0.4962212 0.4948374 0.4897898 0.5477634 0.4814638 0.5565578 0.4789557 0.5540908 0.4735655 0.5452965 0.4760736 0.5073702 0.4930666 0.5213803 0.4889881 0.5189134 0.4835978 0.5049033 0.4876763 0.5712312 0.4752735 0.5682878 0.4688423 0.4641526 0.48643 0.4759033 0.4868971 0.3085138 0.4866204 0.2586493 0.4867626 0.2401489 0.490611 0.2296281 0.4935216</float_array>
+          <technique_common>
+            <accessor source="#butterfly00Shape1-map1-array" count="181" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="butterfly00Shape1-vertices" name="butterfly00Shape1-vertices">
+          <input semantic="POSITION" source="#butterfly00Shape1-positions"/>
+        </vertices>
+        <polylist material="initialShadingGroup" count="134">
+          <input semantic="VERTEX" source="#butterfly00Shape1-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#butterfly00Shape1-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#butterfly00Shape1-map1" offset="2" set="0"/>
+          <vcount>4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4</vcount>
+          <p>7 0 0 1 1 1 20 2 2 21 3 3 9 4 4 5 5 5 22 6 6 23 7 7 5 5 5 7 0 0 21 3 3 22 6 6 0 8 8 9 4 4 23 7 7 24 9 9 11 10 10 10 11 11 15 12 12 16 13 13 12 14 14 11 10 10 16 13 13 17 15 15 13 16 16 12 14 14 17 15 15 18 17 17 14 18 18 13 16 16 18 17 17 19 19 19 16 13 13 15 12 12 3 20 20 6 21 21 17 15 15 16 13 13 6 21 21 4 22 22 18 17 17 17 15 15 4 22 22 8 23 23 19 19 19 18 17 17 8 23 23 2 24 24 21 3 3 20 2 2 10 11 11 11 10 10 22 6 6 21 3 3 11 10 10 12 14 14 23 7 7 22 6 6 12 14 14 13 16 16 24 9 9 23 7 7 13 16 16 14 18 18 29 25 25 25 26 26 41 27 27 42 28 28 9 29 4 5 30 5 43 31 29 44 32 30 5 30 5 29 25 25 42 28 28 43 31 29 0 33 8 9 29 4 44 32 30 45 34 31 32 35 32 31 36 33 36 37 34 37 38 35 33 39 36 32 35 32 37 38 35 38 40 37 34 41 38 33 39 36 38 40 37 39 42 39 35 43 40 34 41 38 39 42 39 40 44 41 38 40 37 37 38 35 28 45 42 27 46 43 39 42 39 38 40 37 27 46 43 30 47 44 40 44 41 39 42 39 30 47 44 26 48 45 42 28 28 41 27 27 31 36 33 32 35 32 43 31 29 42 28 28 32 35 32 33 39 36 44 32 30 43 31 29 33 39 36 34 41 38 45 34 31 44 32 30 34 41 38 35 43 40 0 49 8 24 50 9 47 51 46 46 52 47 14 53 18 19 54 19 49 55 48 48 56 49 19 57 19 2 58 24 50 59 50 49 55 48 24 60 9 14 61 18 48 56 49 47 51 46 51 62 51 46 63 47 0 64 8 45 65 31 53 66 52 52 67 53 35 68 40 40 69 41 54 70 54 53 66 52 40 71 41 26 72 45 52 67 53 51 62 51 45 73 31 35 74 40 46 52 47 47 51 46 56 75 55 55 76 56 48 56 49 49 55 48 58 77 57 57 78 58 49 55 48 50 59 50 59 79 59 58 77 57 47 51 46 48 56 49 57 78 58 56 75 55 60 80 60 55 81 56 46 63 47 51 62 51 62 82 61 61 83 62 52 67 53 53 66 52 63 84 63 62 82 61 53 66 52 54 70 54 61 83 62 60 80 60 51 62 51 52 67 53 68 85 64 54 86 54 26 87 45 67 88 65 69 89 66 63 90 63 54 91 54 68 92 64 71 93 67 68 85 64 67 88 65 70 94 68 69 89 66 68 92 64 71 95 67 72 96 69 74 97 70 71 93 67 70 94 68 73 98 71 75 99 72 72 96 69 71 95 67 74 100 70 64 101 73 65 102 74 74 97 70 73 98 71 65 103 74 66 104 75 75 99 72 74 100 70 2 105 24 79 106 76 80 107 77 50 108 50 50 109 50 80 110 77 81 111 78 59 112 59 79 106 76 76 113 79 77 114 80 80 107 77 80 110 77 77 115 80 78 116 81 81 111 78 84 117 82 85 118 83 92 119 84 93 120 85 78 121 81 77 122 80 90 123 86 91 124 87 87 125 88 86 126 89 96 127 90 97 128 91 89 129 92 88 130 93 94 131 94 95 132 95 90 123 86 88 130 93 89 129 92 91 124 87 92 119 84 86 126 89 87 125 88 93 120 85 94 131 94 85 118 83 84 117 82 95 132 95 96 127 90 82 133 96 83 134 97 97 128 91 98 135 98 101 136 99 100 137 100 99 138 101 102 139 102 105 140 103 104 141 104 103 142 105 103 142 105 104 141 104 101 136 99 98 135 98 106 143 106 107 144 107 105 140 103 102 139 102 108 145 108 111 146 109 110 147 110 109 148 111 112 149 112 113 150 113 111 146 109 108 145 108 114 151 114 115 152 115 113 150 113 112 149 112 116 153 116 117 154 117 115 152 115 114 151 114 111 146 109 119 155 118 118 156 119 110 147 110 113 150 113 120 157 120 119 155 118 111 146 109 115 152 115 121 158 121 120 157 120 113 150 113 117 154 117 122 159 122 121 158 121 115 152 115 101 136 99 108 145 108 109 148 111 100 137 100 104 141 104 112 149 112 108 145 108 101 136 99 105 140 103 114 151 114 112 149 112 104 141 104 107 144 107 116 153 116 114 151 114 105 140 103 123 160 123 126 161 124 125 162 125 124 163 126 102 164 102 128 165 127 127 166 128 103 167 105 103 167 105 127 166 128 126 161 124 123 160 123 106 168 106 129 169 129 128 165 127 102 164 102 130 170 130 133 171 131 132 172 132 131 173 133 134 174 134 135 175 135 133 171 131 130 170 130 136 176 136 137 177 137 135 175 135 134 174 134 138 178 138 139 179 139 137 177 137 136 176 136 135 175 135 141 180 140 140 181 141 133 171 131 137 177 137 142 182 142 141 180 140 135 175 135 139 179 139 143 183 143 142 182 142 137 177 137 126 161 124 130 170 130 131 173 133 125 162 125 127 166 128 134 174 134 130 170 130 126 161 124 128 165 127 136 176 136 134 174 134 127 166 128 129 169 129 138 178 138 136 176 136 128 165 127 163 184 144 164 185 145 162 186 146 161 187 147 158 188 148 81 189 78 78 190 81 160 191 149 152 192 150 59 193 59 81 189 78 158 188 148 151 194 151 58 195 57 59 196 59 152 197 150 150 198 152 57 199 58 58 195 57 151 194 151 149 200 153 56 201 55 57 199 58 150 198 152 145 202 154 55 203 56 56 201 55 149 200 153 60 204 60 144 205 155 145 206 154 55 207 56 61 208 62 147 209 156 144 205 155 60 204 60 62 210 61 146 211 157 147 209 156 61 208 62 63 212 63 148 213 158 146 211 157 62 210 61 69 214 66 153 215 159 148 216 158 63 217 63 69 214 66 72 218 69 154 219 160 153 215 159 75 220 72 155 221 161 154 219 160 72 218 69 66 222 75 156 223 162 155 221 161 75 220 72 160 224 149 78 225 81 165 226 163 166 227 164 169 228 165 170 229 166 168 230 167 167 231 168 173 232 169 174 233 170 172 234 171 171 235 172 166 227 164 165 226 163 173 232 169 171 235 172 162 186 146 164 185 145 169 228 165 167 231 168 172 234 171 174 233 170 163 184 144 161 187 147 168 230 167 170 229 166 176 236 173 175 237 174 157 238 175 158 239 148 160 240 149 159 241 176 122 242 122 152 243 150 158 239 148 157 238 175 117 244 117 151 194 151 152 197 150 122 245 122 116 246 116 150 198 152 151 194 151 117 247 117 107 248 107 149 200 153 150 198 152 116 249 116 106 250 106 145 202 154 149 200 153 107 251 107 144 205 155 129 252 129 106 253 106 145 206 154 147 209 156 138 254 138 129 255 129 144 205 155 146 211 157 139 256 139 138 257 138 147 209 156 148 213 158 143 258 143 139 259 139 146 211 157 153 260 159 177 261 177 143 262 143 148 263 158 153 260 159 154 264 160 178 265 178 177 261 177 155 266 161 179 267 179 178 265 178 154 264 160 156 268 162 180 269 180 179 267 179 155 266 161</p>
+        </polylist>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <originalMayaNodeId>butterfly00Shape1</originalMayaNodeId>
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="VisualSceneNode" name="untitled">
+      <node id="joint5" name="joint5" sid="joint5" type="JOINT">
+        <translate sid="translate">-0.003347066 0 0.5834054</translate>
+        <rotate sid="jointOrientZ">0 0 1 0</rotate>
+        <rotate sid="jointOrientY">0 1 0 0</rotate>
+        <rotate sid="jointOrientX">1 0 0 0</rotate>
+        <scale sid="scale">1 1 1</scale>
+        <node id="joint1" name="joint1" sid="joint1" type="JOINT">
+          <translate sid="translate">0.1966812 0 -0.001430154</translate>
+          <rotate sid="jointOrientZ">0 0 1 -0.03236583</rotate>
+          <rotate sid="jointOrientY">0 1 0 0.6738014</rotate>
+          <rotate sid="jointOrientX">1 0 0 -1.90314e-4</rotate>
+          <rotate sid="rotateZ">0 0 1 71.28003</rotate>
+          <scale sid="scale">1 1 1</scale>
+          <node id="joint2" name="joint2" sid="joint2" type="JOINT">
+            <translate sid="translate">2.045136 0 0</translate>
+            <rotate sid="jointOrientZ">0 0 1 0.03236583</rotate>
+            <rotate sid="jointOrientY">0 1 0 -0.6738014</rotate>
+            <rotate sid="jointOrientX">1 0 0 -1.90314e-4</rotate>
+            <scale sid="scale">1 1 1</scale>
+            <extra>
+              <technique profile="OpenCOLLADAMaya">
+                <originalMayaNodeId>joint2</originalMayaNodeId>
+              </technique>
+            </extra>
+          </node>
+          <extra>
+            <technique profile="OpenCOLLADAMaya">
+              <originalMayaNodeId>joint1</originalMayaNodeId>
+            </technique>
+          </extra>
+        </node>
+        <node id="joint3" name="joint3" sid="joint3" type="JOINT">
+          <translate sid="translate">-0.1966812 0 -0.001430154</translate>
+          <rotate sid="jointOrientZ">0 0 1 0.03237084</rotate>
+          <rotate sid="jointOrientY">0 1 0 179.3262</rotate>
+          <rotate sid="jointOrientX">1 0 0 3.80674e-4</rotate>
+          <rotate sid="rotateZ">0 0 1 71.28003</rotate>
+          <scale sid="scale">1 1 1</scale>
+          <node id="joint4" name="joint4" sid="joint4" type="JOINT">
+            <translate sid="translate">2.045136 0 0</translate>
+            <rotate sid="jointOrientZ">0 0 1 0.0323686</rotate>
+            <rotate sid="jointOrientY">0 1 0 180.6738</rotate>
+            <rotate sid="jointOrientX">1 0 0 0</rotate>
+            <scale sid="scale">1 1 1</scale>
+            <extra>
+              <technique profile="OpenCOLLADAMaya">
+                <originalMayaNodeId>joint4</originalMayaNodeId>
+              </technique>
+            </extra>
+          </node>
+          <extra>
+            <technique profile="OpenCOLLADAMaya">
+              <originalMayaNodeId>joint3</originalMayaNodeId>
+            </technique>
+          </extra>
+        </node>
+        <extra>
+          <technique profile="OpenCOLLADAMaya">
+            <originalMayaNodeId>joint5</originalMayaNodeId>
+          </technique>
+        </extra>
+      </node>
+      <node id="butterfly001" name="butterfly001" type="NODE">
+        <translate sid="translate">0 0 0</translate>
+        <instance_controller url="#butterfly00Shape1-skin">
+          <skeleton>#joint1</skeleton>
+          <skeleton>#joint2</skeleton>
+          <skeleton>#joint3</skeleton>
+          <skeleton>#joint4</skeleton>
+          <skeleton>#joint5</skeleton>
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="initialShadingGroup" target="#lambert1"/>
+            </technique_common>
+          </bind_material>
+        </instance_controller>
+        <extra>
+          <technique profile="OpenCOLLADAMaya">
+            <originalMayaNodeId>butterfly001</originalMayaNodeId>
+          </technique>
+        </extra>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <library_animations>
+    <animation id="joint1.rotateZ_joint1">
+      <source id="joint1.rotateZ_joint1_joint1.rotateZ_joint1-input" name="joint1.rotateZ_joint1_joint1.rotateZ_joint1-input">
+        <float_array id="joint1.rotateZ_joint1_joint1.rotateZ_joint1-input-array" count="21">0.04166662 0.4166666 0.8333333 1.25 1.666667 2.083333 2.5 2.916667 3.333333 3.75 4.166666 4.583333 5 5.416666 5.833333 6.25 6.666666 7.083333 7.5 7.916666 8.333333 </float_array>
+        <technique_common>
+          <accessor source="#joint1.rotateZ_joint1_joint1.rotateZ_joint1-input-array" count="21" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+        <technique profile="OpenCOLLADAMaya">
+          <pre_infinity>CONSTANT</pre_infinity>
+          <post_infinity>CONSTANT</post_infinity>
+        </technique>
+      </source>
+      <source id="joint1.rotateZ_joint1_joint1.rotateZ_joint1-output" name="joint1.rotateZ_joint1_joint1.rotateZ_joint1-output">
+        <float_array id="joint1.rotateZ_joint1_joint1.rotateZ_joint1-output-array" count="21">0 90 -90 90 -90 90 -90 90 -90 90 -90 90 -90 90 -90 90 -90 90 -90 90 -90 </float_array>
+        <technique_common>
+          <accessor source="#joint1.rotateZ_joint1_joint1.rotateZ_joint1-output-array" count="21" stride="1">
+            <param name="ANGLE" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="joint1.rotateZ_joint1_joint1.rotateZ_joint1-interpolation" name="joint1.rotateZ_joint1_joint1.rotateZ_joint1-interpolation">
+        <Name_array id="joint1.rotateZ_joint1_joint1.rotateZ_joint1-interpolation-array" count="21">BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER </Name_array>
+        <technique_common>
+          <accessor source="#joint1.rotateZ_joint1_joint1.rotateZ_joint1-interpolation-array" count="21" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="joint1.rotateZ_joint1_joint1.rotateZ_joint1-intangent" name="joint1.rotateZ_joint1_joint1.rotateZ_joint1-intangent">
+        <float_array id="joint1.rotateZ_joint1_joint1.rotateZ_joint1-intangent-array" count="42">-0.2916667 0 0.2916666 90 0.6944444 -90 1.111111 90 1.527778 -90 1.944444 90 2.361111 -90 2.777778 90 3.194444 -90 3.611111 90 4.027778 -90 4.444445 90 4.861111 -90 5.277778 90 5.694445 -90 6.111111 90 6.527778 -90 6.944445 90 7.361111 -90 7.777778 90 8.194445 -90 </float_array>
+        <technique_common>
+          <accessor source="#joint1.rotateZ_joint1_joint1.rotateZ_joint1-intangent-array" count="21" stride="2">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="joint1.rotateZ_joint1_joint1.rotateZ_joint1-outtangent" name="joint1.rotateZ_joint1_joint1.rotateZ_joint1-outtangent">
+        <float_array id="joint1.rotateZ_joint1_joint1.rotateZ_joint1-outtangent-array" count="42">0.1666666 0 0.5555555 90 0.9722222 -90 1.388889 90 1.805555 -90 2.222222 90 2.638889 -90 3.055556 90 3.472222 -90 3.888889 90 4.305555 -90 4.722222 90 5.138889 -90 5.555555 90 5.972222 -90 6.388889 90 6.805555 -90 7.222222 90 7.638889 -90 8.055556 90 8.666666 -90 </float_array>
+        <technique_common>
+          <accessor source="#joint1.rotateZ_joint1_joint1.rotateZ_joint1-outtangent-array" count="21" stride="2">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <sampler id="joint1.rotateZ_joint1_joint1.rotateZ_joint1-sampler">
+        <input semantic="INPUT" source="#joint1.rotateZ_joint1_joint1.rotateZ_joint1-input"/>
+        <input semantic="OUTPUT" source="#joint1.rotateZ_joint1_joint1.rotateZ_joint1-output"/>
+        <input semantic="INTERPOLATION" source="#joint1.rotateZ_joint1_joint1.rotateZ_joint1-interpolation"/>
+        <input semantic="IN_TANGENT" source="#joint1.rotateZ_joint1_joint1.rotateZ_joint1-intangent"/>
+        <input semantic="OUT_TANGENT" source="#joint1.rotateZ_joint1_joint1.rotateZ_joint1-outtangent"/>
+      </sampler>
+      <channel source="#joint1.rotateZ_joint1_joint1.rotateZ_joint1-sampler" target="joint1/rotateZ.ANGLE"/>
+    </animation>
+    <animation id="joint3.rotateZ_joint3">
+      <source id="joint3.rotateZ_joint3_joint3.rotateZ_joint3-input" name="joint3.rotateZ_joint3_joint3.rotateZ_joint3-input">
+        <float_array id="joint3.rotateZ_joint3_joint3.rotateZ_joint3-input-array" count="21">0.04166662 0.4166666 0.8333333 1.25 1.666667 2.083333 2.5 2.916667 3.333333 3.75 4.166666 4.583333 5 5.416666 5.833333 6.25 6.666666 7.083333 7.5 7.916666 8.333333 </float_array>
+        <technique_common>
+          <accessor source="#joint3.rotateZ_joint3_joint3.rotateZ_joint3-input-array" count="21" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+        <technique profile="OpenCOLLADAMaya">
+          <pre_infinity>CONSTANT</pre_infinity>
+          <post_infinity>CONSTANT</post_infinity>
+        </technique>
+      </source>
+      <source id="joint3.rotateZ_joint3_joint3.rotateZ_joint3-output" name="joint3.rotateZ_joint3_joint3.rotateZ_joint3-output">
+        <float_array id="joint3.rotateZ_joint3_joint3.rotateZ_joint3-output-array" count="21">0 90 -90 90 -90 90 -90 90 -90 90 -90 90 -90 90 -90 90 -90 90 -90 90 -90 </float_array>
+        <technique_common>
+          <accessor source="#joint3.rotateZ_joint3_joint3.rotateZ_joint3-output-array" count="21" stride="1">
+            <param name="ANGLE" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="joint3.rotateZ_joint3_joint3.rotateZ_joint3-interpolation" name="joint3.rotateZ_joint3_joint3.rotateZ_joint3-interpolation">
+        <Name_array id="joint3.rotateZ_joint3_joint3.rotateZ_joint3-interpolation-array" count="21">BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER </Name_array>
+        <technique_common>
+          <accessor source="#joint3.rotateZ_joint3_joint3.rotateZ_joint3-interpolation-array" count="21" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="joint3.rotateZ_joint3_joint3.rotateZ_joint3-intangent" name="joint3.rotateZ_joint3_joint3.rotateZ_joint3-intangent">
+        <float_array id="joint3.rotateZ_joint3_joint3.rotateZ_joint3-intangent-array" count="42">-0.2916667 0 0.2916666 90 0.6944444 -90 1.111111 90 1.527778 -90 1.944444 90 2.361111 -90 2.777778 90 3.194444 -90 3.611111 90 4.027778 -90 4.444445 90 4.861111 -90 5.277778 90 5.694445 -90 6.111111 90 6.527778 -90 6.944445 90 7.361111 -90 7.777778 90 8.194445 -90 </float_array>
+        <technique_common>
+          <accessor source="#joint3.rotateZ_joint3_joint3.rotateZ_joint3-intangent-array" count="21" stride="2">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="joint3.rotateZ_joint3_joint3.rotateZ_joint3-outtangent" name="joint3.rotateZ_joint3_joint3.rotateZ_joint3-outtangent">
+        <float_array id="joint3.rotateZ_joint3_joint3.rotateZ_joint3-outtangent-array" count="42">0.1666666 0 0.5555555 90 0.9722222 -90 1.388889 90 1.805555 -90 2.222222 90 2.638889 -90 3.055556 90 3.472222 -90 3.888889 90 4.305555 -90 4.722222 90 5.138889 -90 5.555555 90 5.972222 -90 6.388889 90 6.805555 -90 7.222222 90 7.638889 -90 8.055556 90 8.666666 -90 </float_array>
+        <technique_common>
+          <accessor source="#joint3.rotateZ_joint3_joint3.rotateZ_joint3-outtangent-array" count="21" stride="2">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <sampler id="joint3.rotateZ_joint3_joint3.rotateZ_joint3-sampler">
+        <input semantic="INPUT" source="#joint3.rotateZ_joint3_joint3.rotateZ_joint3-input"/>
+        <input semantic="OUTPUT" source="#joint3.rotateZ_joint3_joint3.rotateZ_joint3-output"/>
+        <input semantic="INTERPOLATION" source="#joint3.rotateZ_joint3_joint3.rotateZ_joint3-interpolation"/>
+        <input semantic="IN_TANGENT" source="#joint3.rotateZ_joint3_joint3.rotateZ_joint3-intangent"/>
+        <input semantic="OUT_TANGENT" source="#joint3.rotateZ_joint3_joint3.rotateZ_joint3-outtangent"/>
+      </sampler>
+      <channel source="#joint3.rotateZ_joint3_joint3.rotateZ_joint3-sampler" target="joint3/rotateZ.ANGLE"/>
+    </animation>
+  </library_animations>
+  <scene>
+    <instance_visual_scene url="#VisualSceneNode"/>
+  </scene>
+</COLLADA>
